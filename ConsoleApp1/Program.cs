@@ -12,7 +12,9 @@ namespace LazyService
     {
         static void Main(string[] args)
         {
-            User.UserInteraction.SystemStart();
+            User.UserInteraction askUser = new User.UserInteraction();
+            Movies.MovieSelection selectSomeMovie = new Movies.MovieSelection();
+            selectSomeMovie.SelectMovie();
         }
     }
 }

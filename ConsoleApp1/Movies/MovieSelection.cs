@@ -9,24 +9,51 @@ namespace LazyService.Movies
 {
     class MovieSelection
     {
-        public static object SelectMovie()
+        public string addingMovieName;
+        List<object> movieList = new List<object>();
+        public void SelectMovie()
         {
             List<object> movieList = new List<object>();
-            //movieList.Add(Connection.ConnectingDb());
+            Console.Write("Search\n Add movie name to your list:  ");
+            addingMovieName = Console.ReadLine();
 
-            Console.Write("Search\n Enter Movie Name: ");
-
-            
-            
-            string movieName = Console.ReadLine();
-            if(movieName != "")
+            if(addingMovieName != "")
             {
-                foreach (var movie in movieList)
+                movieList.Add(addingMovieName);
+                foreach (var item in movieList)
                 {
-                    Console.WriteLine(movie);
+                    Console.WriteLine(item);
                 }
+                Console.Write("Want to add another movie ? Y/N: ");
+                var yesNo = Console.ReadLine();
+                if(yesNo == "Y")
+                {
+                    SelectMovie();
+                }
+                else
+                {
+                    Console.WriteLine("Thanks for adding your favorite movies");
+                }
+            Console.ReadKey();
+            AskUserToCheckTheList();
             }
-            return movieName;
+        }
+
+        public void AskUserToCheckTheList()
+        {
+            Console.Write("Would you like to view your movie list? Y/N: ");
+            var yesNo = Console.ReadLine();
+
+            if (yesNo == "Y")
+            {
+                Console.WriteLine(movieList);
+                Console.ReadKey();
+            }
+            else
+            {
+                Console.WriteLine("Thanks for adding your favorite movies");
+            }
+            Console.WriteLine("Here are your selected movies");
         }
     }
 }

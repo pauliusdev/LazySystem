@@ -8,11 +8,11 @@ namespace LazyService.User
 {
     class UserInteraction
     {
-        public static string name;
-        public static string serviceSelection;
-        public static string s_tab = "\t\t";
+        public string name;
+        public string serviceSelection;
+        public string s_tab = "\t\t";
 
-        public static object UserDetails()
+        public void UserDetails()
         {
             Console.Write("Enter your Name: ");
             name = Console.ReadLine();
@@ -33,10 +33,9 @@ namespace LazyService.User
                 Console.WriteLine("Invalid Service Selected try again");
                 Console.ReadKey();
             }
-            return name + Movies.MovieSelection.SelectMovie();
         }
 
-        public static void SystemStart()
+        public void SystemStart()
         {
             Console.WriteLine("Welcome its System that does my chores\n");
             UserDetails();
