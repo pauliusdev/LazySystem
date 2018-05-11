@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LazyService
+namespace LazyService.DatabaseR
 {
     class Connection
     {
-        public static object ConnectingDb()
+        public object ConnectingDb()
         {
             List<string> movieList = new List<string>();
             DataTable movieTable = new DataTable();

@@ -9,8 +9,11 @@ namespace LazyService.Movies
 {
     class MovieSelection
     {
-        public string addingMovieName;
+        private string addingMovieName;
+
         List<object> movieList = new List<object>();
+
+
         public void SelectMovie()
         {
             List<object> movieList = new List<object>();

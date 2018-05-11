@@ -11,7 +11,7 @@ namespace LazyService.Books
         private int BookAge = 0;
         private string BookAuthor = "";
 
-        public static object BookPriceAndAge()
+        public void BookPriceAndAge()
         {
 
             Console.Write("Enter your allowance: ");
@@ -30,8 +30,6 @@ namespace LazyService.Books
                 Console.WriteLine("Invalid values for the age or price");
                 Console.ReadKey();
             }
-
-            return age + " " + price;
         }
     }
 }

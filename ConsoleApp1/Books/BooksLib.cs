@@ -8,11 +8,10 @@ namespace LazyService.Books
 {
     class BooksLib
     {
-        public static object BooksLibList()
+        public void BooksLibList()
         {
             List<object> bookList = new List<object>();
 
-            return null;
         }
     }
 }
