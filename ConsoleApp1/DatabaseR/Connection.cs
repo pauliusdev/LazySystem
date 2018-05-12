@@ -11,7 +11,11 @@ namespace LazyService.DatabaseR
 {
     class Connection
     {
-        public object ConnectingDb()
+        public object ConnectionExtention()
+        {
+            return ConnectingDb();
+        }
+        private object ConnectingDb()
         {
             List<string> movieList = new List<string>();
             DataTable movieTable = new DataTable();

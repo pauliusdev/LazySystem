@@ -12,10 +12,14 @@ namespace LazyService
     {
         static void Main(string[] args)
         {
-            Movies.MovieSelection selectSomeMovie = new Movies.MovieSelection();
-            DatabaseR.Connection newConnection = new DatabaseR.Connection();
-            selectSomeMovie.SelectMovie();
-           
+            Movies.MovieLib movies = new Movies.MovieLib();
+
+            Movies.MovieLib test = new Movies.MovieLib();
+            //Movies.MovieSettings movies1 = new Movies.MovieLib();
+            Console.Write("Enter Name of the movie: ");
+            var userInput = Console.ReadLine();
+            movies.AddMovie(userInput);
+            Console.ReadKey();
         }
     }
 }

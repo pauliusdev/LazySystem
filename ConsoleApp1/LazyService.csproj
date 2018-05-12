@@ -46,7 +46,9 @@
     <Compile Include="Books\BooksLib.cs" />
     <Compile Include="DatabaseR\Connection.cs" />
     <Compile Include="DatabaseR\TestConnection.cs" />
+    <Compile Include="Movies\MovieLib.cs" />
     <Compile Include="Movies\MovieSelection.cs" />
+    <Compile Include="Movies\MovieSettings.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User\UserInteraction.cs" />
